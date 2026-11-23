@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vidit Rathore — 3D Parallax Experience</title>
+    <meta
+      name="description"
+      content="Immersive multi-layered 3D nature parallax web experience featuring mountain monoliths, atmospheric fog, cursor-driven depth physics, and GSAP 3 choreography."
+    />
+    <meta property="og:title" content="Vidit Rathore — 3D Parallax Experience" />
+    <meta
+      property="og:description"
+      content="Immersive multi-layered 3D nature parallax web experience featuring mountain monoliths, atmospheric fog, cursor-driven depth physics, and GSAP 3 choreography."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Poppins (100, 300, 400, 800) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome v6 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="hide">
+      <nav aria-label="Primary Navigation">
+        <a href="#home" class="brand-link" aria-label="Travelo Home">
+          <img
+            src="/assets/aistudio/logo_e9c6ca8c.png"
+            alt="Travelo"
+            class="logo"
+            referrerpolicy="no-referrer"
+          />
+        </a>
+        <ul>
+          <li>
+            <a href="#home" id="nav-home">Home</a>
+          </li>
+          <li>
+            <a href="#explore" id="nav-explore">Explore</a>
+          </li>
+          <li class="search">
+            <a
+              href="#search"
+              id="nav-search"
+              aria-label="Search destinations"
+              aria-expanded="false"
+              aria-controls="search-overlay"
+            >
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="hamburger">
+            <a
+              href="#menu"
+              id="nav-hamburger"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="menu-drawer"
+            >
+              <div class="bar"></div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="parallax-stage" data-testid="parallax-stage">
+      <div class="vignette hide" aria-hidden="true"></div>
+
+      <!-- Layer 1: Background Panorama -->
+      <img
+        src="/assets/aistudio/background_bfb8ca25.png"
+        alt="Panoramic misty mountain range"
+        data-speed-x="0.3"
+        data-speed-y="0.3"
+        data-speed-z="0"
+        data-rotation="0"
+        data-distance="-200"
+        class="parallax bg-img"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Layer 2: Distant Atmospheric Fog -->
+      <img
+        src="/assets/aistudio/fog_7_c878e14d.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.27"
+        data-speed-y="0.27"
+        data-speed-z="0"
+        data-rotation="0"
+        data-distance="850"
+        class="parallax fog-7"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Layer 3: Mountain 10 (Far Background Monolith) -->
+      <img
+        src="/assets/aistudio/mountain_10_e94a2247.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.195"
+        data-speed-y="0.195"
+        data-speed-z="0"
+        data-rotation="0"
+        data-distance="1100"
+        class="parallax mountain-10"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Fog 6 -->
+      <img
+        src="/assets/aistudio/fog_6_9955626d.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.25"
+        data-speed-y="0.28"
+        data-speed-z="0"
+        data-rotation="0"
+        data-distance="1400"
+        class="parallax fog-6"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Layer 4: Mountain 9 -->
+      <img
+        src="/assets/aistudio/mountain_9_99147ca1.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.155"
+        data-speed-y="0.155"
+        data-speed-z="0.15"
+        data-rotation="0.02"
+        data-distance="1400"
+        class="parallax mountain-9"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Layer 5: Mountain 8 -->
+      <img
+        src="/assets/aistudio/mountain_8_dd999609.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.11"
+        data-speed-y="0.11"
+        data-speed-z="0"
+        data-rotation="0.02"
+        data-distance="1700"
+        class="parallax mountain-8"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Fog 5 -->
+      <img
+        src="/assets/aistudio/fog_5_d579e64d.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.16"
+        data-speed-y="0.105"
+        data-speed-z="0"
+        data-rotation="0"
+        data-distance="1900"
+        class="parallax fog-5"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Layer 6: Mountain 7 -->
+      <img
+        src="/assets/aistudio/mountain_7_b74be544.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.1"
+        data-speed-y="0.1"
+        data-speed-z="0"
+        data-rotation="0.09"
+        data-distance="2000"
+        class="parallax mountain-7"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Layer 7: Mountain 6 -->
+      <img
+        src="/assets/aistudio/mountain_6_edf306a4.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.065"
+        data-speed-y="0.065"
+        data-speed-z="0.05"
+        data-rotation="0.12"
+        data-distance="2300"
+        class="parallax mountain-6"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Layer 8: Mountain 5 -->
+      <img
+        src="/assets/aistudio/mountain_5_9c1a1b7f.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.08"
+        data-speed-y="0.08"
+        data-speed-z="0.13"
+        data-rotation="0.1"
+        data-distance="2600"
+        class="parallax mountain-5"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Layer 9: Center Heading Text -->
+      <div
+        class="text parallax"
+        data-speed-x="0.07"
+        data-speed-y="0.07"
+        data-speed-z="0"
+        data-rotation="0.11"
+        data-distance="0"
+      >
+        <h2>VIDIT</h2>
+        <h1>RATHORE</h1>
+      </div>
+
+      <!-- Fog 4 -->
+      <img
+        src="/assets/aistudio/fog_4_8d12582b.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.135"
+        data-speed-y="0.135"
+        data-speed-z="0"
+        data-rotation="0"
+        data-distance="2400"
+        class="parallax fog-4"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Foreground Mountain 4 -->
+      <img
+        src="/assets/aistudio/mountain_4_fa0946f9.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.059"
+        data-speed-y="0.059"
+        data-speed-z="0.24"
+        data-rotation="0.14"
+        data-distance="2900"
+        class="parallax mountain-4"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Fog 3 -->
+      <img
+        src="/assets/aistudio/fog_3_0e7888cc.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.11"
+        data-speed-y="0.018"
+        data-speed-z="0"
+        data-rotation="0"
+        data-distance="2800"
+        class="parallax fog-3"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Foreground Mountain 3 -->
+      <img
+        src="/assets/aistudio/mountain_3_90863919.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.04"
+        data-speed-y="0.04"
+        data-speed-z="0.32"
+        data-rotation="0.15"
+        data-distance="3200"
+        class="parallax mountain-3"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Fog 2 -->
+      <img
+        src="/assets/aistudio/fog_2_b2d0ba5c.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.15"
+        data-speed-y="0.115"
+        data-speed-z="0"
+        data-rotation="0"
+        data-distance="3600"
+        class="parallax fog-2"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Foreground Mountain 2 -->
+      <img
+        src="/assets/aistudio/mountain_2_c4ae700b.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.023"
+        data-speed-y="0.023"
+        data-speed-z="0.42"
+        data-rotation="0.15"
+        data-distance="3500"
+        class="parallax mountain-2"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Foreground Mountain 1 -->
+      <img
+        src="/assets/aistudio/mountain_1_414097ad.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.01"
+        data-speed-y="0.01"
+        data-speed-z="0.53"
+        data-rotation="0.2"
+        data-distance="3800"
+        class="parallax mountain-1"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Static Environment Overlays (No Parallax Class) -->
+      <img
+        src="/assets/aistudio/sun_rays_4f48c5b5.png"
+        alt=""
+        aria-hidden="true"
+        class="sun-rays hide"
+        referrerpolicy="no-referrer"
+      />
+      <img
+        src="/assets/aistudio/black_shadow_f0c98691.png"
+        alt=""
+        aria-hidden="true"
+        class="black-shadow hide"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- Foreground Atmospheric Fog 1 -->
+      <img
+        src="/assets/aistudio/fog_1_aa8ace86.png"
+        alt=""
+        aria-hidden="true"
+        data-speed-x="0.12"
+        data-speed-y="0.12"
+        data-speed-z="0"
+        data-rotation="0"
+        data-distance="4100"
+        class="parallax fog-1"
+        referrerpolicy="no-referrer"
+      />
+    </main>
+
+    <!-- Interactive Search Overlay (hidden until triggered) -->
+    <section
+      id="search-overlay"
+      class="scene-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="search-dialog-title"
+      aria-hidden="true"
+      hidden
+    >
+      <div class="overlay-card">
+        <div class="overlay-header">
+          <h3 id="search-dialog-title">Search Vistas &amp; Peaks</h3>
+          <button type="button" class="overlay-close" data-close-overlay aria-label="Close search">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="search-field">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <label for="vista-search-input" class="sr-only">Filter mountain vistas</label>
+          <input
+            id="vista-search-input"
+            type="search"
+            placeholder="Filter peaks (e.g. Tianzi, Mist, Canopy)..."
+            autocomplete="off"
+          />
+        </div>
+        <ul id="vista-results" class="vista-list"></ul>
+      </div>
+    </section>
+
+    <!-- Interactive Explore / Menu Drawer (hidden until triggered) -->
+    <aside
+      id="menu-drawer"
+      class="scene-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="drawer-title"
+      aria-hidden="true"
+      hidden
+    >
+      <div class="drawer-header">
+        <h3 id="drawer-title">Scenic Viewpoints</h3>
+        <button type="button" class="overlay-close" data-close-overlay aria-label="Close menu">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <p class="drawer-subtitle">
+        Shift the 3D parallax camera to inspect depth planes across the mountain monoliths.
+      </p>
+      <div class="drawer-actions">
+        <button type="button" class="drawer-btn" data-preset="center">Center Horizon</button>
+        <button type="button" class="drawer-btn" data-preset="left-ridge">West Ridge</button>
+        <button type="button" class="drawer-btn" data-preset="right-ridge">East Sunbeams</button>
+        <button type="button" class="drawer-btn" data-preset="canopy">Deep Canopy</button>
+        <button type="button" class="drawer-btn" id="replay-intro-btn">Replay Entrance</button>
+      </div>
+    </aside>
+
+    <!-- GSAP 3 Core CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

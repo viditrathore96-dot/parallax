@@ -1,0 +1,6 @@
+{
+  "name": "Vidit Rathore — 3D Parallax Experience",
+  "description": "Immersive multi-layered 3D nature parallax web experience featuring mountain monoliths, atmospheric fog, cursor-driven depth physics, and GSAP 3 choreography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
